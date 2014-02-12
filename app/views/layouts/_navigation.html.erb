@@ -1,19 +1,31 @@
-<%# navigation styled for Bootstrap 3.0 %>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+      <a href="../" class="navbar-brand">爱挖矿矿池</a>
     </div>
-    <div class="collapse navbar-collapse">
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <%= render 'layouts/navigation_links' %>
+        <li class="active">
+          <a href="../getting-started">矿池列表</a>
+        </li>
+        <li>
+          <a></a>
+        </li>
+        <li>
+          <a>欢迎光临爱挖矿矿池,国内可能较全的矿池, <strong>QQ群: 133278594</strong></a>
+        </li>
       </ul>
-    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="../">关于</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>

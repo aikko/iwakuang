@@ -2,19 +2,25 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Iwakuang" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "爱挖矿矿池" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Iwakuang" %>">
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <header>
+  <body screen_capture_injected="true" style="position: static;">
+  <div id="wrap">
+  <div class="container">
       <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+    <%= yield %>
+  </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <div class="ship">友情链接：<a href="http://www.laiteb.com" target="_blank">莱特币</a> | <a href="http://www.btc456.com" target="_blank">比特币导航</a> | <a href="http://btc.cnfol.com/" target="_blank">比特币导航</a></div>
+      <div class="ship">© 爱挖矿 2013 | www.iwakuang.com</div>
+    </div>
+  </div>
+
   </body>
 </html>
