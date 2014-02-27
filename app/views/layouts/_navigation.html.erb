@@ -11,19 +11,16 @@
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <li class="active">
+        <li <%if @nav=='index'%>class="active"<%end%>>
           <a href="../">矿池列表</a>
         </li>
-        <li>
-          <a></a>
-        </li>
-        <li>
-          <a>欢迎光临爱挖矿矿池,有可能成为国内最全的矿池, <strong>QQ群1(满): 133278594，QQ群2: 223884526</strong></a>
+        <li <%if @nav=='share'%>class="active"<%end%>>
+            <a href="../shares/index">算力配股</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="../">关于</a>
+        <li <%if @nav=='about'%>class="active"<%end%>>
+            <a href="../">关于爱挖矿</a>
         </li>
       </ul>
     </nav>
